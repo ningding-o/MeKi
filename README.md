@@ -54,14 +54,6 @@ python tools/preprocess_data.py \
 
 ## 🚀 Training
 
-### Quick Start
-We provide a toy code to demonstrate the model logic and data flow of our method.
-```
-pip install torch easydict
-python3 meki_modeling_demo.py
-```
-
-
 ### Multi-GPU Training
 We provide code to run large scale training with [Megatron](https://github.com/NVIDIA/Megatron-LM/tree/core_r0.12.0) on multi-GPU machines.
 ```bash
@@ -69,11 +61,19 @@ We provide code to run large scale training with [Megatron](https://github.com/N
 cd Megatron-LM/
 
 # Launch training on 8 GPUs
-base train_1_7B_meki_dim_256.sh
+bash train_1_7B_meki_dim_256.sh
 
 # The above script is tested on Nvidia H-series GPUs.
 # Please adjust hyper-params according to your own configurations.
 ```
+
+### Quick Start (toy code)
+We also provide a demo to rapidly go through the model logic and data flow of our method.
+```
+pip install torch easydict
+python3 meki_modeling_demo.py
+```
+
 
 
 ## 🤝 Citation
